@@ -1,0 +1,224 @@
+html,body{
+    height:100%;
+    width:100%;
+    font-family: 'Droid Sans', sans-serif;
+    overflow-y:auto;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    color: #6fbb44;
+}
+
+#loader {
+    position:fixed;
+    /*background:url(../images/loader.png) no-repeat center center;*/
+    height:100vh;
+    width:100vw;
+    background:white;
+    z-index:9;
+}
+
+#loaderIMG {
+    position:fixed;
+    background:url(../images/loader.png) no-repeat center center;
+    height:100vh;
+    width:100vw;
+    z-index:9;
+}
+
+#demoBox,
+#needBox,
+#poiBox{
+    /*padding:5px;*/
+    /*background-color: lightgrey;*/
+    /*height:100%;*/
+    /*display:none;*/
+}
+
+#sCButton,
+#sButton {
+    display:none;
+}
+
+.mapcontain {
+    padding:0;
+    height:100%;
+    width:calc(100vw - 400px);
+    position:fixed;
+    left:400px;
+    -webkit-transition: left .3s; /* Safari */
+    transition: left .3s;
+}
+
+#map {
+    /*position: absolute;*/
+    height:100%;
+    width:100%;
+}
+
+#sideRight {
+    position:fixed;
+    right:-500px;
+    top:0;
+    width:500px;
+    height:100vh;
+    z-index:1;
+    background-color:rgba(255,255,255,.9);
+    -webkit-transition: right .3s; /* Safari */
+    transition: right .3s;
+    overflow-y: scroll;
+    padding:10px;
+    overflow-x:hidden;
+}
+
+#sRX {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+#sRImg {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:-1;
+}
+
+#sideRTitle {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+#sideRContentContain{
+    position: absolute;
+    top:160px;
+    width: 480px;
+}
+#sideRContent {
+}
+
+.addInfo-list a .demo-card-wide{
+    padding:10px;
+    font-size:1.5em;
+    background-color:#6fbb44;
+    color: white;
+}
+.addInfo-list a .demo-card-wide span{
+    margin-right:10px
+}
+.addInfo-list a:hover{
+    text-decoration:none
+}
+
+/*loader*/
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: #6fbb44;
+    position: fixed;
+    z-index:999999999999;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab{
+    background-color:#6fbb44;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
+    background:#6fbb44;
+}
+#demoBox, #needBox, #poiBox{
+    overflow:visible;
+}
+
+#clearBtn{
+    background: #263238;
+}
+.mdl-button--fab.mdl-button--colored{
+    background:#6fbb44;
+}
+.mdl-button--fab.mdl-button--colored:hover{
+    background: #455A64;
+}
+/*background: #455A64;*/
+
+.sidebar {
+    width:400px;
+    position:absolute;
+    left:0;
+    padding:20px;
+    -webkit-transition: left .3s; /* Safari */
+    transition: left .3s;
+    overflow: auto;
+    height:100%;
+}
+
+@media screen and (max-width: 500px) {
+    .sidebar{
+        width:100%;
+        left: -500px;
+        z-index:99999999999;
+        background-color:white;
+        /*height:100%;*/
+    }
+
+    #sButton {
+        display:inline;
+        position:absolute;
+        top:10px;
+        left:10px;
+        font-size:2.5em;
+        color: #6fbb44;
+        background-color:rgba(0,0,0,0);
+        border-width:0;
+    }
+    #sCButton {
+        display:inline;
+        position:absolute;
+        top:10px;
+        right:10px;
+        font-size:2.5em;
+        color: #6fbb44;
+        background-color:rgba(0,0,0,0);
+        border-width:0;
+    }
+
+    #sideRight{
+        width:100%;
+    }
+
+    #sideRContentContain {
+        width:95%;
+    }
+
+    .mapcontain{
+        width:100%;
+        left:0;
+    }
+}
+
+
